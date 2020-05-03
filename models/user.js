@@ -13,4 +13,5 @@ const UserSchema = Schema({
     image: String
 });
 
+
 export default model('User', UserSchema);
