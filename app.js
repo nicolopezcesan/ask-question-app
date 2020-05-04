@@ -6,7 +6,8 @@ import { urlencoded, json } from 'body-parser';
 const app = express();
 
 // cargar rutas
-
+import user_routes from './routes/user';
+// import publication_routes from './routes/publication';
 
 // middlewares
 app.use(urlencoded({ extended: false }));
@@ -25,7 +26,7 @@ app.use((req, res, next) => {
 
 
 // rutas
-// app.use('/api', user_routes);
+app.use('/api', user_routes);
 // app.use('/api', follow_routes);
 // app.use('/api', publication_routes);
 // app.use('/api', message_routes);
