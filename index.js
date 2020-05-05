@@ -10,6 +10,7 @@ mongoose.connect(url, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
         console.log('Connect successfull! :)');
 
+        mongoose.set('useFindAndModify', false);
         app.listen(port, () => {
             console.log('Server run on http://localhost:3800');
         });
